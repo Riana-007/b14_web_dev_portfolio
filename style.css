@@ -1,0 +1,291 @@
+/* Reset style */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* Common button(ধরি,btn) style */
+.common_btn{
+    background-color: #fd6e0aFF;
+    padding: 6px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    border: none; /*boarder e 4pash er kalo border soriye dilam => aesthetic*/
+    cursor: pointer;
+}
+
+/* Another button with white bg, orange text */
+.outline_btn{
+    background-color: whitesmoke;
+    padding: 6px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fd6e0aFF;
+    border: 1px solid #fd6e0aFF; /*boarder e 4pash er kalo border soriye dilam => aesthetic*/
+    cursor: pointer;
+}
+
+/* .container{} e eta likhe deway alada kore sobgulate r lekha lagbe na */
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* mod 5.3 --> 3:30 */
+/* header{
+    background-color: bisque;
+} */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+
+    /* [Standard procedure] => left-right side e ekta gap create korbo */
+    max-width: 1200px;
+    margin: auto;
+    padding: 12px 0;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 20px;
+}
+.logo-r{
+    color: #fd6e0aFF;
+}
+
+ul{
+    /* element 3 pasapasi hoye jay */
+    display: flex;
+    justify-content: space-between; /*Horizontally / row wise er direction control er jonno*/
+    gap: 10px;
+    align-items: center; /*Vertically / up-down wise er direction control er jonno*/
+
+    /* ul er bullet gullu soranor jonno */
+    list-style: none;
+}
+
+ul li a{
+    /* link er nicher blue underline remove kore */
+    text-decoration: none;
+    
+}
+
+/* Hero section style START!!!*/
+.hero-parent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-left-p_1{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/*nested selector ---> .hero-left h2*/
+.hero-left h2{
+    font-weight: bold;
+    font-size: 65px;
+    margin-bottom: 12px;
+}
+
+.hero-left-btn-parent{
+    margin-top: 20px;
+}
+
+.hero-parent-root{
+    background-color: rgb(255, 242, 234);
+}
+/* Hero section style END!!!*/
+
+/* 2 tar kaj baki ase */
+
+/* Amazing work section style START*/
+.my-amazing-parent{
+    text-align: center;
+}
+.gallery{
+    margin-top: 20px;
+    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+
+    /*VVI*/
+    grid-template-areas: 
+    "one two three" 
+    "four two six"
+    "four five six"
+}
+.gallery img{
+    height: 100%;
+    width: 100%;
+    
+    object-fit: cover; /*To fix aspect retio of img*/
+}
+
+.box-1{
+    grid-area: one;
+}
+.box-2{
+    grid-area: two;
+}
+.box-3{
+    grid-area: three;
+}
+.box-4{
+    grid-area: four;
+}
+.box-5{
+    grid-area: five;
+}
+.box-6{
+    grid-area: six;
+}
+/* Amazing work section style END!!!*/
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    margin-top: 100px;
+    padding: 70px 60px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+
+    background: #FFF5EE;
+    border-radius: 20px;
+
+    align-items: start;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.footer-left h2,
+footer h2{
+    font-size: 32px;
+    font-weight: 700;
+    color: #181818;
+    margin-bottom: 20px;
+}
+
+.footer-left p{
+    color: #555;
+    line-height: 1.8;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.footer-icon-parent{
+    display: flex;
+    gap: 18px;
+}
+
+.footer-icon-parent span{
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+    color: #fd6e0a;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.footer-icon-parent span:hover{
+    transform: translateY(-5px);
+    background: #fd6e0a;
+    color: white;
+}
+
+/* =========================
+   FORM
+========================= */
+
+footer form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer form input,
+footer form textarea{
+    width: 100%;
+
+    padding: 14px 18px;
+
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+footer form input:focus,
+footer form textarea:focus{
+    border-color: #fd6e0a;
+    box-shadow: 0 0 0 4px rgba(253,110,10,0.15);
+}
+
+footer textarea{
+    resize: none;
+}
+
+/* Submit Button */
+
+footer form button{
+    width: fit-content;
+    margin-top: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media screen and (max-width: 768px){
+
+    footer{
+        grid-template-columns: 1fr;
+        padding: 40px 25px;
+        gap: 40px;
+    }
+
+    .footer-left,
+    footer form{
+        width: 100%;
+    }
+}
